@@ -1,0 +1,234 @@
+/* CSS: Cascading style sheets 
+Ww have already created a html file that will point to the css stylesheet
+
+
+Selectors: ways of grabbing and manipualting HTML element
+
+    1. Element Selector
+    2. Class Selector (. is the prefix you need to write before the class name)
+
+        -> Can be used with any or all elements with that class name  
+        -> Used for creating many elements
+
+    3. ID Selector (# is the prefix you need to use)
+            -> pretty much same as class selector but can be used on one element at a time  
+            -> Used for one single element
+
+
+## Lets change the color of the title. 
+For that we have mentioned the name of the class as title in h1 tag of title. 
+Since the name of the class is specified for the h1 tag of title, we will use that name to manipulate that text 
+
+In the below example, title and subtitle are the class name given inside the tags
+
+
+## specificity and when to use Selectors:
+ -> Say if two selectors are been applied on the same element.
+ -> So which will be the powerful selector that will be applied ?
+ -> so, thats specificity.
+ -> the more powerful the selector that will be applied on the same element
+
+ ## PseudoSelectors:
+  Won't style anything if they don't exists
+
+    -> hover: when you move there, it will change its color
+    -> first-child: when you want the every first item in the list
+    -> last-child: when you want the every last item in the list
+    -> nth_child(n) : every nth child in the list.
+    -> only-child: if there is only one child in the list
+
+
+
+## PseudoSelectors won't work if you have used style attribute in the code of that particular tag    
+*/
+
+
+body { 
+    background:rgba(6, 165, 173, 0.288);
+}
+
+.title{
+    color : red;
+}
+
+.listtitle{
+    color : rgb(255, 0, 242);
+}
+
+#contact-me{
+    color: brown;
+}
+
+/*Lets change the h2 color of all to yellow*/
+h2{
+    color:rgb(255, 0, 157);
+}
+
+/*
+Now see, the unordered list title is in h2, so it got colored in pink
+But now, when  .listtitle is used, got changed to blue, that means, .listtile is more powerful than h2
+
+## so in general in CSS, element selector is less powerful than the class
+*/
+.subtitle{
+    color:blue;
+}
+
+/*Ordered list is in blue color as of now*/
+#services{
+    color:green;  /*Color changed to green now*/
+}
+
+/*
+Now changing the html code and using the style attribute in the ordered list code
+ITs the most powerful and will replace the class and id tag specifications
+
+So in  general, Style attribute >> ID Selector >> Class Selector >> Element Selector
+*/
+
+h2:hover{
+    color:yellow;
+    /*where ever the h2 tag is used, upon taking the cursor there, the color gets change to yellow.*/
+}
+
+li:first-child{
+    color:rgb(194, 16, 126);
+    /*all the first childs of the list will be in pink color*/
+}
+
+li:last-child{
+    color:rgb(16, 194, 31);
+}
+
+li:nth-child(2){
+    color:rgb(194, 123, 16);
+}
+
+/*
+li:only-child{
+    color:rgb(255, 0, 0);
+}
+*/
+
+td:first-child{
+    color:rgb(194, 16, 126);
+}
+
+/*
+#google-link:link{
+    color:blue
+}
+
+#google-link:visited{
+    color:red
+}
+*/
+
+
+/*
+Since the above commented code takes lot of lines and space to write.
+Lets do the same in one liner in CSS 
+
+Since the anchor i.e. a tag comes after ol(ordered list) in the html code,
+we are writing ol + a in the code that is anchor tag which is after the ol tag in
+ 
+if h2 tag was before the a tag: then h2 + a{}
+## This is called as sibling selector
+
+## You can still use the pseudo selectors on it: since ol and a are still the Selectors
+*/
+
+ol + a {
+    color:red;
+}
+
+/*Submit button color changed to brown*/
+/*every button(Submit button: See the code) followed by p(paragraph) but are in the same parent, to be colored purple.
+*/
+p ~ button{
+    color:rgb(250, 8, 250);
+    /*For this symbol ~, it means p and button are both under the same parent*/
+}
+
+
+
+/*
+This is CHILD SELECTOR
+Every single li in ul : ul > li
+*/
+ul > li{
+    color:brown;
+    /*
+    Color isnt changing since we have used the pseudo selectors above in the code.
+    In CSS, the specificity plays the major role.
+    */
+}
+
+
+/* 
+Decandance  Selector 
+Child is li and will go up till its parent is ol
+*/
+ol li{
+    color:rgb(248, 0, 227);
+}
+
+/* We have already used this code, now lets use the attribute selectors
+## all the classes as subtitles are written in h2 tag 
+
+.subtitle{
+    color:blue;
+}*/
+
+
+h2[class=subtitle]{
+    /*now the above h2.hover code doesn't work */
+    color:darkorange;
+}
+
+/*The images in the images should have border
+But there are many images on the page, so specify the path suing ^ after src is written
+
+^ -> means source attribute starts with this attribute 
+$ -> means source attribute ends with this attribute
+* -> means the given source attributes is anywhere in the image attribute
+*/
+img[src^="images/"]{
+    border:20px solid black;
+}
+
+
+
+/*Now suppose many classe have same initial name but diff ending
+and you want to apply the diff. things on diff classes.
+Si use this class~= attribute
+But the main point is that the name you are specifying after ~= must be seperated by a spce in the html code 
+and must also have - inbetween them
+
+just remove the - in below code in css and also in html code
+and see the changes
+*/
+
+h2[class ~= article-subtitle]{
+    background: rgb(203, 238, 7);
+}
+
+/*Now you want to apply everything that starts with some class name or exactly the same class name
+But say, it starts with the same name provided but has very long name,
+the rule is that the end of teh given attribute must end with - if the class name doesn't end there 
+The class name provided in the attribute must be seperated by -
+
+SEE the HTMl code and change the name of class by deleting the hypen from end of the specified class name in below code
+You will see the changes.
+
+Mostly used in cases like::
+classname-565
+classname-5589
+
+## starts with common class name and has - at the end of common name
+*/
+
+h2[class |= attribute-selector]{
+    background: rgb(7, 238, 45);
+}
+

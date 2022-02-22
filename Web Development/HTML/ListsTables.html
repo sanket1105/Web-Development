@@ -1,0 +1,101 @@
+
+
+<!-- 
+
+    list will be unordered -> <ul>
+    to write list of items: <li>
+
+    unorderd list will have bullet points by default
+    ordered list will have numbers in it by default
+    
+    
+    <th> for header column name 
+     <td> for column entries   
+
+    <thead> <tbody> will show the different areas of the table    
+    These are just there so that we can see the code content clearly and nothing else 
+
+    If u want any particular entry take more than one col space
+    use colspan in <td> tag
+    -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "description" content = " This is my first website">
+
+        <h1>This is Shankii's first website </h1>
+        <title> Shankii's Website </title>
+
+    </head>
+
+    <body> 
+
+        <h2>Unordered list</h2>
+        <ul >
+            <li> Apples</li>
+            <li> <a href= "#">Apples with link</a></li>
+        </ul>
+
+        <h2>Ordered list</h2>
+        <ol type = "I"> <!-- I or i  will go for roman numbers, A will go for capital alphabets-->
+            <li> Apples</li>
+            <li> <a href= "#">Apples with link</a></li>
+            <li>Other Fruits
+                <ol type ='A'>
+                    <li>Guava</li>
+                    <li> Papaya</li>
+                </ol>
+            </li>
+        </ol>       
+
+
+        <h1>Descriptive List</h1>
+        <dl>
+            <dt>Apples</dt>
+            <dd>-They are red in color</dd>
+        </dl>
+
+        <hr/>
+        <hr/>
+
+
+         <h1>Table in HTML</h1>
+        <hr/>
+        
+         <!--#############################-->
+
+        <table>
+
+            <thead>
+            <caption><h5>List of Numbers</h5></caption>
+            <tr> <!-- This is 1st table row-->
+                <th>num1</th> <!-- This is first header column-->
+                <th>num2</th> <!-- This is 2nd header column-->
+                <th>num3</th>
+            </tr>
+            </thead>
+
+        <tbody>
+            <tr> <!-- This is 2nd table row-->
+                <td colspan="2">One</td> <!-- This is first column-->
+                <td>Two</td> <!-- This is 2nd column-->
+                <td>Three</td>
+                <td>Seven</td>
+            </tr>
+
+            <tr> <!-- This is 3rd table row-->
+                <td>Four</td> <!-- This is first column-->
+                <td>Five</td> <!-- This is 2nd column-->
+                <td>Six</td>
+            </tr>
+        </tbody>    
+        </table>
+
+
+    
+
+    </body>
+</html>

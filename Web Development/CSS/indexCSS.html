@@ -1,0 +1,170 @@
+
+<!-- link written in the href tag is the link to the css file created
+--> 
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "description" content = " This is my first website">
+
+        <h1 class="title">This is Shankii's first website </h1>
+        <h4>Contact Details of Shankii</h4>
+        <h3 id="contact-me">1122334455</h3>
+        <link rel="stylesheet" type = "text/css" href="Basic.css">
+         <title> Shankii's Website</title>
+    </head>
+
+    <body> 
+
+        <h2 class="listtitle">Unordered list</h2>
+        <ul>
+            <li> Apples</li>
+            <li> <a href= "#">Apples with link</a></li>
+        </ul>
+
+        <h2 class="subtitle" id="services" style="color:rgb(58, 88, 112);">Services</h2>Ordered list</h2>
+        
+        <ol type = "I"> <!-- I or i  will go for roman numbers, A will go for capital alphabets-->
+            <li> Apples</li>
+            <li> <a href= "#">Apples with link</a></li>
+            <li>Other Fruits
+                <ol type ='A'>
+                    <li>Guava</li>
+                    <li> Papaya
+                        <ol type="i">
+                            <li>Mango</li>
+                        </ol>
+                    </li>
+                    <li><ol>
+                        <li>The list of fruits ends here</li>
+                    </ol></li>
+                </ol>
+            </li>
+        </ol>     
+
+
+        <a href="https://www.google.com" target="blank" id="google-link">Click here to go to google</a>
+
+        <h2 class = "subtitle">Descriptive List</h2>
+        <dl>
+            <dt>Apples</dt>
+            <dd>-They are red in color</dd>
+        </dl>
+
+        <!--Theres no server,so action will be left blank-->
+        <form action="">
+            <h6>Required Fields are mentined my *</h6>
+            <h2> Contact Information</h2>
+
+            <p>*Name: <input type="text" name="name" required></p>
+
+            <fieldset> 
+                <legend>*Gender</legend>
+            <p>
+                <input type="radio" name="gender" id="Male" required> Male
+                <br>
+                <input type="radio" name="gender" id="Female" required> Female
+            </p>
+             </fieldset>
+
+             <p> *Address: <textarea name="adddress" id="address" cols="45" rows="3" required></textarea>  </p>
+             <p> *Email: <input type="email" name='email' id="email" required></p>
+             <p> *Pincode: <input type='number' name='pincode' id = 'pincode' required></p>
+             
+             <h2>*Payment Information</h2>
+             <p>*Card Type:
+                 <select name="card type" id = 'card type' required>
+                    <!--Leave the first option as blank so that if it is not selected, no value should be passed in the server-->
+                    <option value="">--Select a Card Type--</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Master Card">Master Card</option>
+                    <option value="Rupay">Rupay</option>    
+                </select>    
+             </p>
+
+             <p>*Card Number <input type="number" name="card_number" id = 'card_number' required></p>
+             <p>*Expiry Date <input type='date' name="'exp_date" id = 'exp_date' required></p>
+             <p>*CVV <input type='password' name="cvv" id='CVV' required></p>
+        
+            <button>Submit</button> 
+            <!-- <input type="submit" value="Pay Now"> -->
+
+        </form>
+
+        </br>
+            <img width = "315" height="152.5" src="https://mediacloud.theweek.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1639653158/theweek/2021/12/Max-Verstappen-GettyImages-1359127369.jpg" alt="Image no longer exist on the internet" />
+            <img width = "315" src="https://mediacloud.theweek.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1639653158/theweek/2021/12/Max-Verstappen-GettyImages-1359127369.jpg" alt="Image no longer exist on the internet" />
+            <img width = "400" src = "images/NewYork.jpg" alt="Picture of New York" />
+     
+            <!-- Setting a link on the image-->
+            <h1>Image with the link</h1>
+            <a href = " https://i.pinimg.com/originals/da/fa/b4/dafab49ed4af2a4ba367c9662071b9dc.png"> 
+                <img width = "630" src="https://mediacloud.theweek.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1639653158/theweek/2021/12/Max-Verstappen-GettyImages-1359127369.jpg" alt="Image no longer exist on the internet" />
+            </a>
+    
+            <h3> Video on the page</h3>
+            <!-- Video in the website-->
+            <video width = "400" src="images/GoaWaterLeakage.mp4" poster="images/Thumbnail.jpg" controls  loop>   </video>
+    
+    
+            <h1>You tube video link on the web site</h1>
+            <h5>code is embedded from the share option on you tube</h5>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/foD3MCZLxIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Theory</th>
+                        <th>Practical</th>
+                        <th>Total Marks</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>English</td>
+                        <td>60</td>
+                        <td>30</td>
+                        <td>90</td>
+                        <td>A</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Maths</td>
+                        <td>70</td>
+                        <td>30</td>
+                        <td>100</td>
+                        <td>A+</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>50</td>
+                        <td>30</td>
+                        <td>80</td>
+                        <td>B</td>
+                    </tr>
+    
+                </tbody>
+    
+                <tfoot>
+                    <th colspan="5">Result: Pass</th>
+                    <!--In the same way we can use the row span thing-->
+                </tfoot>
+            </table>
+
+            <h2 class="subtitle article-subtitle">Just checking the attribute selector 01</h2>
+            <h2 class="attribute-selector- mike testing 123">checking the attribute selector 02</h2>
+            <h2 class="attribute-selector">checking the attribute selector 03 </h2>
+
+
+        </body>
+</html>
+
+

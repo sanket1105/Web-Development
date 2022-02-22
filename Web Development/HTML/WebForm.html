@@ -1,0 +1,75 @@
+
+<!-- 
+
+## Elements in Form
+    1. Input
+        -> tpye='text' : Pre defined value
+            a. type other values : password, radio, checkbox, file, submit, reset, image,
+        -> name='firstname' : User defined value
+    
+        2. textarea : we can specify the area to be given by using the rows and cols
+        3. Select box: select any one from the list provided
+   
+
+    2. Radio button:
+        -> provide the same name attribute in the input type when you are usig the radio button
+        -> else you will be able to selct multiple radio buttons
+    
+    3. fieldset : to wrap the certain things in one
+    4. Select tag: when you need to select one from many things
+
+    5. required attribute,  unless mentioned, form won't be submitted
+    -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "description" content = "Payment form HTML Code">
+
+        <h1>Payment Form</h1>
+        <title>Payment Form</title>
+    </head> 
+
+    <body>
+        <!--Theres no server,so action will be left blank-->
+        <form action="">
+            <h6>Required Fields are mentined my *</h6>
+            <h2> Contact Information</h2>
+
+            <p>*Name: <input type="text" name="name" required></p>
+
+            <fieldset> 
+                <legend>*Gender</legend>
+            <p>
+                <input type="radio" name="gender" id="Male" required> Male
+                <br>
+                <input type="radio" name="gender" id="Female" required> Female
+            </p>
+             </fieldset>
+
+             <p> *Address: <textarea name="adddress" id="address" cols="45" rows="3" required></textarea>  </p>
+             <p> *Email: <input type="email" name='email' id="email" required></p>
+             <p> *Pincode: <input type='number' name='pincode' id = 'pincode' required></p>
+             
+             <h2>*Payment Information</h2>
+             <p>*Card Type:
+                 <select name="card type" id = 'card type' required>
+                    <!--Leave the first option as blank so that if it is not selected, no value should be passed in the server-->
+                    <option value="">--Select a Card Type--</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Master Card">Master Card</option>
+                    <option value="Rupay">Rupay</option>    
+                </select>    
+             </p>
+
+             <p>*Card Number <input type="number" name="card_number" id = 'card_number' required></p>
+             <p>*Expiry Date <input type='date' name="'exp_date" id = 'exp_date' required></p>
+             <p>*CVV <input type='password' name="cvv" id='CVV' required></p>
+
+             <input type="submit" value="Pay Now">
+
+        </form>
+    </body>
+ 
+</html>

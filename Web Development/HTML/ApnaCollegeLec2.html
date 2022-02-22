@@ -1,0 +1,102 @@
+
+<!-- 
+
+Hyperlink are of two types: Absolute and relative
+
+## accessing files in html
+
+    1. Files in the same Folder: 
+        a) target.html OR ./target.html
+    2. Moving into folders
+        a) /folder_name/target.html     
+    3. Moving out the folders
+        a) ../target.html    
+
+## Attributes in video tag
+    1. Muted: video wil start as mutes
+    2. autoplay: video will start autoplaying
+    3. loop: once the video ends, it will repeat again
+    4. controls: controls buttons like pause will be shown
+    5. Poster: showing the thumbnail
+
+## Tables in HTML
+    1. Rowspan: will traverse each row
+    2. Colspan: will traverse each column    
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "description" content = " This is my first website">
+
+        <h1>This is Shankii's first website </h1>
+        <title> Shankii's Website </title>
+    </head>    
+
+    <body>
+        <a href="https://www.google.com" target = 'blank'>Google Link</a>
+    </br>
+        <h3>Lists and Tables page</h3>
+        <a href="ListsTables.html" target ="blank" rel="noopener">Link to one of the folders file</a>
+
+    </br>
+        <img src="NewYork.jpg" alt="Can't display the image currently" width="450"> 
+
+    </br>
+        <video src="GoaWaterLeakage.mp4" width ="150" controls loop muted poster="Thumbnail.jpg"> </video>    
+    <br>
+        <h3>Apna College HTML video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2QR11oDukn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+        <h3>Geeks for Geeks Page Link</h3>
+        <iframe src="https://www.geeksforgeeks.org" frameborder="0"></iframe>
+
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Theory</th>
+                    <th>Practical</th>
+                    <th>Total Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>English</td>
+                    <td>60</td>
+                    <td>30</td>
+                    <td>90</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>Maths</td>
+                    <td>70</td>
+                    <td>30</td>
+                    <td>100</td>
+                    <td>A+</td>
+                </tr>
+
+                <tr>
+                    <td>Computer Science</td>
+                    <td>50</td>
+                    <td>30</td>
+                    <td>80</td>
+                    <td>B</td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <th colspan="5">Result: Pass</th>
+                <!--In the same way we can use the row span thing-->
+            </tfoot>
+        </table>
+    </body>
+    
+
+</html>

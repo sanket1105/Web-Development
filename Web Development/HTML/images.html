@@ -1,0 +1,51 @@
+
+<!-- 
+
+    alt is use to specify when the image is not found on the net 
+    <img src="" alt=" " />  ## in this way you can close the image tab 
+
+    The main problem is of resizing the image
+    as soon as we open the page, the image is very huge 
+    So you handle those by height and width
+    they both are in pixels
+
+    When using the pictures see the aspect ratio of the orginal picture
+    In that way change the height OR width of the image on the website,
+    Change in one will automatically adjust the other for same image aspect ratio
+  
+    Include controls in the video tag else video will not run on the website
+    
+    The aspect ratio scene is same for video as that of image thing
+
+    poster in the video tag will be use to create the thumbnail problem
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <h1>This is Shankii's First Website</h1>
+    </head>
+
+    <body>
+
+        <img width = "315" height="152.5" src="https://mediacloud.theweek.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1639653158/theweek/2021/12/Max-Verstappen-GettyImages-1359127369.jpg" alt="Image no longer exist on the internet" />
+        <img width = "315" src="https://mediacloud.theweek.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1639653158/theweek/2021/12/Max-Verstappen-GettyImages-1359127369.jpg" alt="Image no longer exist on the internet" />
+        <img width = "400" src = "NewYork.jpg" alt="Picture of New York" />
+ 
+        <!-- Setting a link on the image-->
+        <h1>Image with the link</h1>
+        <a href = " https://i.pinimg.com/originals/da/fa/b4/dafab49ed4af2a4ba367c9662071b9dc.png"> 
+            <img width = "630" src="https://mediacloud.theweek.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1639653158/theweek/2021/12/Max-Verstappen-GettyImages-1359127369.jpg" alt="Image no longer exist on the internet" />
+        </a>
+
+        <h1> Video on the page</h1>
+        <!-- Video in the website-->
+        <video width = "400" src="GoaWaterLeakage.mp4" poster="Thumbnail.jpg" controls autoplay loop>   </video>
+
+
+        <h1>You tube video link on the web site</h1>
+        <h5>code is embedded from the share option on you tube</h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/foD3MCZLxIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </body>
+</html>
